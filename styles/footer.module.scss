@@ -1,0 +1,11 @@
+.info {
+    background-color: rgb(92, 184, 92);
+    border-radius: 5px;
+    border-color: transparent;
+    font-weight: bold;
+}
+
+.info:hover {
+    background-color: gray;
+    border-color: rgb(92, 184, 92);
+}
