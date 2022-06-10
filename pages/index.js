@@ -72,7 +72,7 @@ function home() {
               <div className={`${styles.scroll} d-flex align-items-center mx-3`}>
                 {promo.map((data, idx) => (
                   <div className="mx-3 my-5" key={idx} style={{ cursor: 'pointer' }}>
-                    <CardMenu newClass={`${styles.populer}`} cardName={data.name} cardFill={data.fill} cardPrice={data.price} cardImage={data.image} />
+                    <CardMenu newClass={`${styles.populer}`} cardName={data.name} cardFill={data.fill} cardPrice={data.price} cardImage={data.image} cardDiscount={data.disc} cardCut={data.cut} />
                   </div>
                 ))}
               </div>
@@ -87,7 +87,7 @@ function home() {
             <div className={`${styles.scroll} d-flex align-items-center mt-5 mx-3`}>
               {terbaru.map((data, idx) => (
                 <div className="my-3 mx-3" key={idx} style={{ cursor: 'pointer' }}>
-                  <CardMenu newClass={`${styles.populer}`} cardName={data.name} cardFill={data.fill} cardPrice={data.price} cardImage={data.image} />
+                  <CardMenu newClass={`${styles.populer}`} cardName={data.name} cardFill={data.fill} cardPrice={data.price} cardImage={data.image} cardDiscount={data.disc} cardCut={data.cut} cardJual={data.jual} />
                 </div>
               ))}
             </div>
@@ -105,7 +105,7 @@ function home() {
             <div className={`${styles.scroll} mt-5 d-flex align-items-center`}>
               {terlaris.map((data, idx) => (
                 <div className="my-3 mx-3" key={idx} style={{ cursor: 'pointer' }}>
-                  <CardMenu newClass={`${styles.populer}`} cardName={data.name} cardFill={data.fill} cardPrice={data.price} cardImage={data.image} />
+                  <CardMenu newClass={`${styles.populer}`} cardName={data.name} cardFill={data.fill} cardPrice={data.price} cardImage={data.image} cardDiscount={data.disc} cardCut={data.cut} cardJual={data.jual} />
                 </div>
               ))}
             </div>
@@ -123,7 +123,7 @@ function home() {
             <div className={`${styles.scroll} mt-5 d-flex align-items-center`}>
               {populer.map((data, idx) => (
                 <div className="my-3 mx-3" key={idx} style={{ cursor: 'pointer' }}>
-                  <CardMenu newClass={`${styles.populer}`} cardName={data.name} cardFill={data.fill} cardPrice={data.price} cardImage={data.image} />
+                  <CardMenu newClass={`${styles.populer}`} cardName={data.name} cardFill={data.fill} cardPrice={data.price} cardImage={data.image} cardDiscount={data.disc} cardCut={data.cut} cardJual={data.jual} />
                 </div>
               ))}
             </div>

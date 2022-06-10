@@ -15,18 +15,21 @@ const populer = [
       name: "Minyak Goreng Kelapa Barco..",
       fill: "1 L",
       price: "38.200 / Pcs",
+      jual: 5,
       image: '/images/populer3.png'
     },
     {
       name: "Minyak Kelapa Kara (Pouch)",
       fill: "2 L",
       price: "69.800 / Pcs",
+      jual: 3,
       image: '/images/populer4.png'
     },
     {
       name: "Minyak Wijen Sin Tai Hing",
       fill: "375 ml",
       price: "86.300 / Pack",
+      jual: 1,
       image: '/images/populer5.png'
     },
     {
