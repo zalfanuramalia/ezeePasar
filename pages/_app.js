@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {useEffect} from 'react'
+import '../styles/color-pallete.scss'
 import { Provider } from 'react-redux'
 import store from '../redux/store'
 

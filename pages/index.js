@@ -35,7 +35,9 @@ function home() {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Layout>
-          <ControlledCarousel />
+          <div className='mt-5'>
+            <ControlledCarousel />
+          </div>
           <Container>
             <Card className='rounded rounded-3 bg-white shadow my-5'>
               <Row className='mx-5 my-3'>
@@ -144,7 +146,7 @@ function home() {
               +62817844931
             </div>
             <h3 className='text-center my-4'>Informasi Terkini</h3>
-            <div className='d-flex justify-content-around align-items-center'>
+            <div className={`${styles.bottoms} d-flex justify-content-around align-items-center mb-5`}>
               <div className='d-flex justify-content-center align-items-center'>
                 <BsInstagram className={`${styles.social} mx-3`} />
                 <h4>ezeePasar</h4>

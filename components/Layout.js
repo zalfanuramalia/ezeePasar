@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar'
+import NavbarHome from './Navbar'
 import Footer from './Footer'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
@@ -18,7 +18,7 @@ function Layout({children}) {
   return (
     <Container>
       <Card className='shadow-lg'>
-        <Navbar/>
+        <NavbarHome/>
         <div >
           {children}      
         </div>
