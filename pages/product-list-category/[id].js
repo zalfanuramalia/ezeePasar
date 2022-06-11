@@ -11,7 +11,7 @@ function ProductList() {
                 <meta name="description" content="Next Coffee for You" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>        
-            <div>ProductList {router.query.id}</div>
+            <div className='d-flex justify-content-center align-items-center vh-100'>Product List {router.query.id}</div>
         </>
     )
 }
