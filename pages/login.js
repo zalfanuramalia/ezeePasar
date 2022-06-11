@@ -5,11 +5,11 @@ function login() {
   return (
     <>
       <Head>
-          <title>Login | Pasar Modern Digital</title>
+          <title>Login | ezeePasar | Pasar Modern Digital</title>
           <meta name="description" content="Next Coffee for You" />
           <link rel="icon" href="/favicon.ico" />
-          <div>login</div>
       </Head>
+      <div className='d-flex justify-content-center align-items-center vh-100'>Login</div>
     </>
     
   )

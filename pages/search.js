@@ -9,7 +9,7 @@ function Search() {
           <meta name="description" content="Next Coffee for You" />
           <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>search</div>
+      <div className='d-flex justify-content-center align-items-center vh-100'>Search</div>
     </>
   )
 }
