@@ -11,22 +11,41 @@ import populer from '../components/Populer'
 import terlaris from '../components/Terlaris'
 import terbaru from '../components/Terbaru'
 import promo from '../components/Promo'
+import { useRouter } from 'next/router'
 
-function home() {
+function Home() {
   const product = [
-    {name: "Promo", img: '/images/sayur1.png'}, 
-    {name: "Produk Sembako", img: '/images/sayur2.png'},
-    {name: "Paket Spesial", img: '/images/sayur3.png'}, 
-    {name: "Sayur", img: '/images/sayur4.jpg'},
-    {name: "Buah", img: '/images/sayur5.jpg'}, 
-    {name: "Daging", img: '/images/sayur6.jpg'},
-    {name: "Promo", img: '/images/sayur1.png'}, 
-    {name: "Produk Sembako", img: '/images/sayur2.png'},
-    {name: "Paket Spesial", img: '/images/sayur3.png'}, 
-    {name: "Sayur", img: '/images/sayur4.jpg'},
-    {name: "Buah", img: '/images/sayur5.jpg'}, 
-    {name: "Daging", img: '/images/sayur6.jpg'},
+    {id: 1, name: "Promo", img: '/images/sayur1.png'}, 
+    {id: 2, name: "Produk Sembako", img: '/images/sayur2.png'},
+    {id: 3, name: "Paket Spesial", img: '/images/sayur3.png'}, 
+    {id: 4, name: "Sayur", img: '/images/sayur4.jpg'},
+    {id: 5, name: "Buah", img: '/images/sayur5.jpg'}, 
+    {id: 6, name: "Daging", img: '/images/sayur6.jpg'},
+    {id: 7, name: "Promo", img: '/images/sayur1.png'}, 
+    {id: 8, name: "Produk Sembako", img: '/images/sayur2.png'},
+    {id: 9, name: "Paket Spesial", img: '/images/sayur3.png'}, 
+    {id: 10, name: "Sayur", img: '/images/sayur4.jpg'},
+    {id: 11, name: "Buah", img: '/images/sayur5.jpg'}, 
+    {id: 12, name: "Daging", img: '/images/sayur6.jpg'},
   ]
+
+  const router = useRouter()
+
+  const goToList = (id) => {
+    router.push(`product-list-category/${[id]}`)
+  }
+
+  const goToProduct = (id) => {
+    router.push(`product/${[id]}`)
+  }
+
+  const toAboutUs = () => {
+    router.push('tentang-kami')
+  }
+
+  const toLogin = () => {
+    router.push('login')
+  }
   return (
     <>
         <Head>
@@ -44,7 +63,7 @@ function home() {
                 <Col xl={6} sm={12} className="text-justify">
                   <div className={`${styles.aktif}`}>Aktifkan ezeeTunai untuk pembayaran tanpa ribet</div>
                   <div className='mt-3'>
-                    <Button className={`${styles.button}`}>Aktivasi</Button>
+                    <Button onClick={toLogin} className={`${styles.button}`}>Aktivasi</Button>
                   </div>
                 </Col>
                 <Col className='text-end'>
@@ -54,7 +73,7 @@ function home() {
             </Card>
             <div className={!`${styles.scroll}` ? `d-flex align-items-center mt-3` : `${styles.scroll} d-flex align-items-center scroll scroll-smooth mt-3`}>
               {product.map((data, idx) => (
-                <div className='my-3 d-flex flex-column align-items-center' key={idx} style={{ cursor: 'pointer' }}>
+                <div className='my-3 d-flex flex-column align-items-center' key={idx} style={{ cursor: 'pointer' }} onClick={() => goToList(data.id)}>
                   <div className='text-center me-3'><Image src={data.img} className={`${styles.img}`} alt="sayur" width={120} height={120} /></div>
                   <div className='text-center'>{data.name}</div>
                 </div>
@@ -73,7 +92,7 @@ function home() {
               <Image src='/images/bg-promo.png' alt='logo' className={`${styles.home} position-absolute`} />
               <div className={`${styles.scroll} d-flex align-items-center mx-3`}>
                 {promo.map((data, idx) => (
-                  <div className="mx-3 my-5" key={idx} style={{ cursor: 'pointer' }}>
+                  <div className="mx-3 my-5" key={idx} style={{ cursor: 'pointer' }} onClick={()=>goToProduct(data.id)}>
                     <CardMenu newClass={`${styles.populer}`} cardName={data.name} cardFill={data.fill} cardPrice={data.price} cardImage={data.image} cardDiscount={data.disc} cardCut={data.cut} />
                   </div>
                 ))}
@@ -138,7 +157,7 @@ function home() {
             <h3 className='text-center my-4'>Tentang ezeePasar</h3>
             <p className='text-center'>Platform belanja online berkonsep pasar modern berbasis digital melayani kebutuhan harian seperti sayur, buah segar dan bumbu dapur dengan jaminan kualitas yang baik.</p>
             <div className='text-center'>
-              <Button className={`${styles.btn}`}>Pelajari Lebih</Button>
+              <Button onClick={()=>toAboutUs()} className={`${styles.btn}`}>Pelajari Lebih</Button>
             </div>
             <h3 className='text-center my-4'>Informasi & Pemesanan</h3>
             <div className={`${styles.contact} d-flex justify-content-center align-items-center mb-5`}>
@@ -162,4 +181,4 @@ function home() {
   )
 }
 
-export default home
+export default Home
