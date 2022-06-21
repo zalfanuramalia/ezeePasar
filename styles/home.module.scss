@@ -8,6 +8,22 @@
     width: auto
 }
 
+.scroll::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background: transparent;
+    border: 1px solid #d5d5d5;
+}
+
+.scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb:horizontal {
+    background: gray;
+    border-radius: 10px;
+}
+
 .aktif {
     font-size: large;
 }
