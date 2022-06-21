@@ -3,10 +3,19 @@
     border-radius: 5px;
     border-color: transparent;
     font-weight: bold;
+    color: white;
 }
 
 .info:hover {
     background-color: rgb(222, 245, 222);
     color: rgb(92, 184, 92);
     border-color: rgb(92, 184, 92);
+}
+
+.icon {
+    font-size: 28px;
+}
+
+.text {
+    font-size: 20px;
 }

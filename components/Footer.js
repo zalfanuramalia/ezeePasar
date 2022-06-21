@@ -7,8 +7,8 @@ function Footer() {
   return (
    <Container className={`${styles.navAwal} py-3 shadow-lg`}>
       <Button className={`${styles.info} d-flex justify-content-center align-items-center text-center w-100 py-2`}>
-        <div className=''><BsWhatsapp /></div>
-        <span>Info & Bantuan Contact Whatsapp</span>
+        <div className={`${styles.icon} mx-2`}><BsWhatsapp /></div>
+        <div className={`${styles.text}`}>Info & Bantuan Contact Whatsapp</div>
       </Button>
    </Container>
   )
