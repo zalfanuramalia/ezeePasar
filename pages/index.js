@@ -155,7 +155,7 @@ function Home() {
                 <Image layout='intrinsic' alt='logo' src='/images/footer.jpg' width="100" height="auto"  className="d-block w-100" />
             </div>
             <h3 className='text-center my-4'>Tentang ezeePasar</h3>
-            <p className='text-center'>Platform belanja online berkonsep pasar modern berbasis digital melayani kebutuhan harian seperti sayur, buah segar dan bumbu dapur dengan jaminan kualitas yang baik.</p>
+            <p className={`${styles.about} text-center`}>Platform belanja online berkonsep pasar modern berbasis digital melayani kebutuhan harian seperti sayur, buah segar dan bumbu dapur dengan jaminan kualitas yang baik.</p>
             <div className='text-center'>
               <Button onClick={()=>toAboutUs()} className={`${styles.btn}`}>Pelajari Lebih</Button>
             </div>
@@ -168,11 +168,11 @@ function Home() {
             <div className={`${styles.bottoms} d-flex justify-content-around align-items-center mb-5`}>
               <div className='d-flex justify-content-center align-items-center'>
                 <BsInstagram className={`${styles.social} mx-3`} />
-                <h4>ezeePasar</h4>
+                <h4 className={`${styles.promo}`}>ezeePasar</h4>
               </div>
               <div className='d-flex justify-content-center align-items-center'>
                 <ImFacebook2 className={`${styles.social} mx-3`}  />
-                <h4>ezeePasar</h4>
+                <h4 className={`${styles.promo}`}>ezeePasar</h4>
               </div>
             </div>
           </div>

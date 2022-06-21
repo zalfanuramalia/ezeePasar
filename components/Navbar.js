@@ -29,7 +29,7 @@ function NavbarHome() {
                 <Form onClick={goSearch} className='mx-5 px-5'>
                     <Form.Group as={Row} controlId="formPlaintextPassword">
                         <Col sm="10">
-                            <Form.Control type="text" placeholder="Bawang Merah" className=' mx-5' />
+                            <Form.Control type="text" placeholder="Bawang Merah" className={`${styles.bg} mx-5`} />
                         </Col>
                     </Form.Group>
                 </Form>
@@ -39,7 +39,7 @@ function NavbarHome() {
                     <li className="nav-item">
                         <Link href='/favorite'>
                             <button className="btn position-relative ms-lg-1">
-                                <BsBellFill className="fs-2 text-grey"/>
+                                <BsBellFill className={`${styles.icon} fs-2`}/>
                                 <div className={`bg-white position-absolute text-white rounded-circle`}>0</div>
                             </button>
                         </Link>
@@ -47,7 +47,7 @@ function NavbarHome() {
                     <li className="nav-item">
                         <Link href='/home'>
                             <button className="btn position-relative ms-lg-1">
-                                <RiShoppingBag3Fill className="fs-2 text-grey"/>
+                                <RiShoppingBag3Fill className={`${styles.icon} fs-2`}/>
                                 <div className={`bg-white position-absolute text-white rounded-circle`}>0</div>
                             </button>
                         </Link>
@@ -55,7 +55,7 @@ function NavbarHome() {
                     <li className="nav-item dropdown ms-2">
                         <Link href='/home'>
                             <a className="nav-link fw-bold fs-5" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <FiMenu className="fs-2 text-black"/>
+                                <FiMenu className={`${styles.icon} fs-2`}/>
                                 <div className='`bg-white position-absolute text-white rounded-circle'>0</div>
                             </a>
                         </Link>

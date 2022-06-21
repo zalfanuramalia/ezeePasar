@@ -1,7 +1,20 @@
 .navAwal {
-    padding: 0 16.55rem;
+    padding: 0 15.9rem;
     position: fixed;
     z-index: 9999;
     background-color: white;
     transition: .3s;
+}
+
+.bg {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background-color: #F4F4F4;
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+}
+
+.icon {
+    color: grey;
+    font-family: 'Montserrat';
 }
