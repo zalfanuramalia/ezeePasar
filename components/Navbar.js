@@ -12,27 +12,23 @@ import styles from '../styles/navbar.module.scss'
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
-const delayExecution = (time) => {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve("ok"), time);
-    });
-  };
-
 function NavbarHome() {
     const router = useRouter()
-    const [index, setIndex] = useState("Bawang Goreng")
-    const placeholderText = ["Mayonaise Original Kwepie", "Angco Tanpa Biji", "Tauco Manis Kokita"];
+    const [index, setIndex] = useState(0)
+    const placeholderText = ["Tauco Manis Kokita", "Angco Tanpa Biji", "Mayonaise Hot Spicy"];
 
-    const changePlaceholder = async () => {
-        for (let i = 0; i < placeholderText.length; i++) {
-          await delayExecution(2000);
-          setIndex(placeholderText[i]);
-        }
-      };
-    
-      useEffect(() => {
-        changePlaceholder();
-      }, []);
+    useEffect(()=> {
+        const timer = () => {
+            setIndex(prevIndex => {
+                if(prevIndex === placeholderText.length - 1) {
+                    return 0;
+                }
+                return prevIndex + 1
+            })
+        };
+        setInterval(timer, 2000)
+        return () => {clearInterval(timer)}
+    }, [])
 
     const goSearch = () => {
         router.push('/search')
@@ -50,7 +46,7 @@ function NavbarHome() {
                 <Form onClick={goSearch} className='mx-5 px-5'>
                     <Form.Group as={Row} controlId="formPlaintextPassword">
                         <Col sm="10">
-                            <Form.Control type="text" placeholder={index} className={`${styles.bg} mx-5`} />
+                            <Form.Control type="text" placeholder={placeholderText[index]} className={`${styles.bg} mx-5`} />
                         </Col>
                     </Form.Group>
                 </Form>
