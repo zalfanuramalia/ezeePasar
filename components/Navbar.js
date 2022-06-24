@@ -10,9 +10,30 @@ import Link from 'next/link';
 import {FiMenu} from 'react-icons/fi'
 import styles from '../styles/navbar.module.scss'
 import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+
+const delayExecution = (time) => {
+    return new Promise((resolve) => {
+      setTimeout(() => resolve("ok"), time);
+    });
+  };
 
 function NavbarHome() {
     const router = useRouter()
+    const [index, setIndex] = useState("Bawang Goreng")
+    const placeholderText = ["Mayonaise Original Kwepie", "Angco Tanpa Biji", "Tauco Manis Kokita"];
+
+    const changePlaceholder = async () => {
+        for (let i = 0; i < placeholderText.length; i++) {
+          await delayExecution(2000);
+          setIndex(placeholderText[i]);
+        }
+      };
+    
+      useEffect(() => {
+        changePlaceholder();
+      }, []);
+
     const goSearch = () => {
         router.push('/search')
     }
@@ -29,7 +50,7 @@ function NavbarHome() {
                 <Form onClick={goSearch} className='mx-5 px-5'>
                     <Form.Group as={Row} controlId="formPlaintextPassword">
                         <Col sm="10">
-                            <Form.Control type="text" placeholder="Bawang Merah" className={`${styles.bg} mx-5`} />
+                            <Form.Control type="text" placeholder={index} className={`${styles.bg} mx-5`} />
                         </Col>
                     </Form.Group>
                 </Form>
