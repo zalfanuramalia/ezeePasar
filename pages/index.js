@@ -166,11 +166,11 @@ function Home() {
             </div>
             <h3 className='text-center my-4'>Informasi Terkini</h3>
             <div className={`${styles.bottoms} d-flex justify-content-around align-items-center mb-5`}>
-              <div className='d-flex justify-content-center align-items-center'>
+              <div className='d-flex justify-content-center align-items-center' style={{ cursor: 'pointer' }}>
                 <BsInstagram className={`${styles.social} mx-3`} />
                 <h4 className={`${styles.promo}`}>ezeePasar</h4>
               </div>
-              <div className='d-flex justify-content-center align-items-center'>
+              <div className='d-flex justify-content-center align-items-center' style={{ cursor: 'pointer' }}>
                 <ImFacebook2 className={`${styles.social} mx-3`}  />
                 <h4 className={`${styles.promo}`}>ezeePasar</h4>
               </div>
